@@ -1,0 +1,10 @@
+.htaccess
+.sass-cache/
+node_modules/
+wp-config.php
+wp-content/themes/yourtheme/compiled-css/yourthemecss.css
+wp-content/themes/yourtheme/compiled-css/yourthemecss.css.map
+wp-content/themes/yourtheme/compiled-css/html5blank.css
+wp-content/themes/yourtheme/style.css
+wp-content/uploads
+
