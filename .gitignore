@@ -1,6 +1,8 @@
+!/.gitignore
 .htaccess
 .sass-cache/
-node_modules/
+node_modules/*
+!node_modules/bootstrap
 wp-config.php
 wp-content/themes/yourtheme/compiled-css/yourthemecss.css
 wp-content/themes/yourtheme/compiled-css/yourthemecss.css.map
