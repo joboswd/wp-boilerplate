@@ -46,5 +46,9 @@
 					</nav>
 					<!-- /nav -->
 
+					<!-- custom menu -->
+					<nav class="header-nav position-fixed w-100">
+						<?php include( locate_template( 'template-parts/yourheader.php', false, false ) ); ?>
+					</nav>
 			</header>
 			<!-- /header -->
