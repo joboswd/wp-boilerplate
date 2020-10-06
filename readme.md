@@ -9,7 +9,7 @@ Rapidly deploy your Wordpress site using this stack. The cool components other t
 ## Getting started
 * Run 'npm install' to install dependencies.
 * You may change the html5blank folder name from 'yourtheme' to your preferred name. Change the theme image in the admin as well. Please take note that if you change it, please update **Gruntfile.js** according to your changes.
-* You may change the theme css from 'yourtheme.css' to your preferred name. Please take note that if you change it, please update **Gruntfile.js** according to your changes.
+* You may change the theme css from 'yourtheme.css' to your preferred name. Please take note that if you change it, update **Gruntfile.js** according to your changes.
 
 ## Features
 
@@ -29,12 +29,12 @@ Rapidly deploy your Wordpress site using this stack. The cool components other t
 ### Mobile Side Drawer Menu
 * A side drawer menu that displays 'Header Menu' by default. It's displayed up to 767px viewport.
 * Call this component by the hook below:
-    <?php get_template_part('template-parts/burgermenu'); ?>
+    ```lang-php <?php get_template_part('template-parts/burgermenu'); ?>```
 
 ### HTML5 Form that submits to Google Sheet
 * A highly modified form that's built from this [tutorial here](https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175). It has all proper validation for all the fields.
 * Configure your Google Sheet as per the link above.
 * Insert your Google Sheet script URL on line 23 of '/template-parts/contact-form.php'.
 * Call this component by the hook below:
-    <?php get_template_part('template-parts/home/contact-form'); ?>
+    ```lang-php <?php get_template_part('template-parts/home/contact-form'); ?>```
 
