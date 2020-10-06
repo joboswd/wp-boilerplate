@@ -28,14 +28,11 @@ Rapidly deploy your Wordpress site using this stack. The cool components other t
 
 ### Mobile Side Drawer Menu
 * A side drawer menu that displays 'Header Menu' by default. It's displayed up to 767px viewport.
-* Call this component by the hook below:
-    ```lang-php <?php get_template_part('template-parts/burgermenu'); ?>```
+* Call this component by using this hook: ```<?php get_template_part('template-parts/burgermenu'); ?>```
 
 ### HTML5 Form that submits to Google Sheet
 * A highly modified form that's built from this [tutorial here](https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175). It has all proper validation for all the fields.
 * Configure your Google Sheet as per the link above.
 * Insert your Google Sheet script URL on line 23 of '/template-parts/contact-form.php'.
-* Call this component by the hook below:
-    <!-- language: lang-php -->
-    <?php get_template_part('template-parts/home/contact-form'); ?>
+* Call this component by using this hook: ```<?php get_template_part('template-parts/home/contact-form'); ?>```
 
