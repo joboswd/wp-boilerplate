@@ -1,73 +1,40 @@
-# [HTML5 Blank](http://html5blank.com)
+# Wordpress Boilerplate that has HTML5Blank theme, Bootstrap 4, Grunt, SASS, and some cool components.
 
-Powerful shell for rapidly deploying your WordPress projects.
+Rapidly deploy your Wordpress site using this stack. The cool components other than the stack mentioned above, are a side drawer menu(mobile) and a form that sends the data directly to a Google sheet.
 
-* Project: [github.com/toddmotto/html5blank](https://github.com/toddmotto/html5blank)
-* Website: [html5blank.com](http://html5blank.com)
-* Twitter: [@html5blank](http://twitter.com/html5blank)
-* Author : [Todd Motto](http://toddmotto.com) // [@toddmotto](http://twitter.com/toddmotto)
+* HTML5Blank repo: [https://github.com/toddmotto/html5blank](https://github.com/toddmotto/html5blank)
+* Author: Jayson Ronald Obos // [@19atpressured](http://twitter.com/19atpressured)
+* Contact: [joboswd@gmail.com](mailto:joboswd@gmail.com)
 
-## Contributors (in order of pull request)
-[David Munn](https://github.com/Munnday), [Patrick Zeinert](https://github.com/CoeusCC), [J-Rabe](https://github.com/J-Rabe), [Steve Steiner](https://github.com/ssteinerx), [Kyle Hudson](https://github.com/diskhub), [chrisdl](https://github.com/chrisdl), [Marcel Miranda](https://github.com/reaktivo), [Fx Bénard](https://github.com/fxbenard), Ioan Virag, [Mohamed Elkebir](https://github.com/elkebirmed), [lregla](https://github.com/lregla), Carlos Pinar, [Joshua Lyman](https://github.com/jlyman), [Kevin Plattret](https://github.com/kevinplattret), [Wesllei Henrique](https://github.com/wesllei), [Stacey Cordoni](https://github.com/staceycordoni).
-
-## Getting Started with HTML5 Blank
-
-Download the latest version from [html5blank.com](http://html5blank.com)
-
-## Get involved! Make HTML5 Blank better
-
-There are a few ways to get involved, submit a Pull Request, or submit a comment on the website - [html5blank.com](http://html5blank.com)
+## Getting started
+* Run 'npm install' to install dependencies.
+* You may change the html5blank folder name from 'yourtheme' to your preferred name. Change the theme image in the admin as well. Please take note that if you change it, please update **Gruntfile.js** according to your changes.
+* You may change the theme css from 'yourtheme.css' to your preferred name. Please take note that if you change it, please update **Gruntfile.js** according to your changes.
 
 ## Features
 
-### HTML5
-* Basic Semantic HTML5 Markup
-* W3C Valid Code Foundations
-* Responsive Ready, ViewPort meta data
-* HTML Class support for IE7, IE8, IE9 Conditionals (HTML5 Boilerplate)
-* Clean, neatly organised code, with PHP annotations
+### SASS
+* All SASS files are imported thru 'yourtheme/sass/styles.scss'.
+* To watch your SASS changes, run 'grunt watch'.
+* SASS is converted to css via grunt and concatenated to the html5blank css via grunt as well.
 
-### jQuery + JavaScript
-* Replaced built-in WordPress enqueue with Google CDN
-* Protocol relative jQuery if Google CDN offline (HTML5 Boilerplate)
-* Conditionizr for cross-platform/device detects and enhancements
-* Modernizr feature detection, HTML5 element support for legacy, progressive enhancement (HTML5 Boilerplate)
-* DOM Ready JavaScript file setup (scripts.js) for instant JavaScript development
-* JavaScript files enqueued using WordPress functions into wp_head
+### Bootstrap 4
+* Bootstrap 4 is installed via npm instead of using it via CDN.
+* Bootstrap 4 documentation [here](https://getbootstrap.com/docs/4.5/getting-started/introduction/).
 
-### CSS3
-* HTML5 Boilerplate reset
-* Media Queries framework for instant development using @media
-* @font-face empty framework with Fonts folder setup ready for new custom fonts
-* CSS3 custom selection styles
-* Inline print styles (HTML5 Boilerplate)
-* Body element config, including Optimize Legibility for kerning and font-smoothing
-* Replaced focus styles to avoid blue blur in field elements, replaced with border
-* Stylesheet enqueued using WordPress functions into wp_head
+### Grunt
+* Grunt automates the task of converting the SASS to css, concatenating the converted css with the theme css and minifying the output css.
+* Run 'grunt watch' to run the tasks.
 
-### Preloaded Functions (functions.php)
-* Enqueue Scripts functions setup
-* Enqueue Styles functions setup
-* Dynamic WordPress Menu Navigation Support, preloaded with 3 Dynamic menus
-* Cleaned up dynamic nav output (Remove outer 'div')
-* Remove all injected classes from nav items, ID's, Page ID's
-* Custom Post Type x1 preloaded for demonstration, supporting: Category, Tags, Post Thumbnails, Excerpts
-* Dynamic Sidebar with x2 Widget Areas, and sidebar.php setup
-* WordPress Thumbnail Support, no Plugin image cropping, custom Arrays and Thumbnail settings
-* Custom Excerpt callbacks, with changeable callback numbers
-* Replaced 'Read More' button for custom Excerpt callbacks
-* Demo Shortcodes included, with Nested Shortcode capability
-* Add Slug to body class (Starkers Theme credit)
-* wp_head functions stripped right down, remove excess injected junk
-* All functions annotated, categorised into sections, filters, actions, shortcodes etc.
-* Space for development, neatly organised code with Modules/External files
+### Mobile Side Drawer Menu
+* A side drawer menu that displays 'Header Menu' by default. It's displayed up to 767px viewport.
+* Call this component by the hook below:
+    <?php get_template_part('template-parts/burgermenu'); ?>
 
-### Theme Files and Functionality
-* Built in Pagination, no plugins (strips out prev + next post and gives page numbers)
-* Optimised Google Analytics in footer (HTML5 Boilerplate)
-* Widget Area Sidebar support, functions in place to get developing
-* Custom Search Form included (searchform.php) - fully editable
-* Tags support for showing Post Tags
-* Category support for showing the Category of post
-* Author support showing the author
-* Demo Custom Page Template for expansion
+### HTML5 Form that submits to Google Sheet
+* A highly modified form that's built from this [tutorial here](https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175). It has all proper validation for all the fields.
+* Configure your Google Sheet as per the link above.
+* Insert your Google Sheet script URL on line 23 of '/template-parts/contact-form.php'.
+* Call this component by the hook below:
+    <?php get_template_part('template-parts/home/contact-form'); ?>
+
