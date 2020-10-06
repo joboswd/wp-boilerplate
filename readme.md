@@ -36,5 +36,6 @@ Rapidly deploy your Wordpress site using this stack. The cool components other t
 * Configure your Google Sheet as per the link above.
 * Insert your Google Sheet script URL on line 23 of '/template-parts/contact-form.php'.
 * Call this component by the hook below:
-    ```lang-php <?php get_template_part('template-parts/home/contact-form'); ?>```
+    <!-- language: lang-php -->
+    <?php get_template_part('template-parts/home/contact-form'); ?>
 
